@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js" defer></script>
+    <title>Escravizados</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="a-nav" href="index.html">Escravizados</a>
+        </nav>
+    </header>
+    <br>
+    <main>
+        <h1>Introdução</h1>
+        <br>
+        <p>Ao analisar os dados referentes aos trabalhadores resgatados do trabalho escravo em Santa Catarina no período de 2017 a 2022, atráves do site <b><a id="reference" href="https://smartlabbr.org/trabalhoescravo">https://smartlabbr.org/trabalhoescravo</a></b>, é possível identificar algumas  características do perfil sociocultural desses indivíduos. Neste contexto, destacam-se  informações sobre a escolaridade, raça, idade e gênero dos trabalhadores resgatados. A análise desses dados permite compreender melhor a realidade desses indivíduos e  apontar para questões sociais relevantes relacionadas à educação, igualdade racial,  faixa etária e gênero.</p>
+        <br><br>
+        <div class="filter-resgatados">
+            <span class="material-symbols-outlined">filter_alt</span>
+            <button class="btn">Resgatados Naturais</button>
+            <button class="btn">Resgatados Residentes</button>
+        </div>
+
+
+        <!-- Naturais -->
+
+
+        <br><br>
+
+        <div class="cont_n">
+                <h2>Resgatados Naturais</h2>
+                <br><br>
+                <div class="filter">
+                    <span class="material-symbols-outlined">filter_alt</span>
+                    <button class="btn">Escolaridade</button>
+                    <button class="btn">Raça</button>
+                    <button class="btn">Idade</button>
+                    <button class="btn">Gênero</button>
+                </div>
+                <h3>Escolaridade</h3>
+                <br>
+                <div>
+                    <canvas id="graf1_nat"></canvas>
+                </div>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, laborum inventore similique voluptas maiores saepe amet at facilis cum et reiciendis ea sequi? Quam, dicta. Commodi, aliquid. Quae, saepe pariatur.</p>
+                <br>
+                
+                <h3>Raça</h3>
+                <br>
+                <div>
+                    <canvas id="graf2_nat"></canvas>
+                  </div>
+                
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, laborum inventore similique voluptas maiores saepe amet at facilis cum et reiciendis ea sequi? Quam, dicta. Commodi, aliquid. Quae, saepe pariatur.</p>
+                <br>
+                
+                <h3>Idade</h3>
+                <br>
+                <<div>
+                    <canvas id="graf3_nat"></canvas>
+                </div>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, laborum inventore similique voluptas maiores saepe amet at facilis cum et reiciendis ea sequi? Quam, dicta. Commodi, aliquid. Quae, saepe pariatur.</p>
+                <br>
+                
+                <h3>Gênero</h3>
+                <br>
+                <div>
+                    <canvas id="graf4_nat"></canvas>
+                </div>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, laborum inventore similique voluptas maiores saepe amet at facilis cum et reiciendis ea sequi? Quam, dicta. Commodi, aliquid. Quae, saepe pariatur.</p>
+                <br>
+            
+        </div>
+            <!-- Residentes -->
+
+        <div class="cont_r">
+
+                <br><br>
+                <h2>Resgatados Residentes</h2>
+                <br><br>
+                <div class="filter">
+                    <span class="material-symbols-outlined">filter_alt</span>
+                    <button class="btn">Escolaridade</button>
+                    <button class="btn">Raça</button>
+                    <button class="btn">Idade</button>
+                    <button class="btn">Gênero</button>
+                </div>
+                <br><br>
+                
+                <h3>Escolaridade</h3>
+                <br>
+                <div>
+                    <canvas id="graf1_res"></canvas>
+                </div>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, laborum inventore similique voluptas maiores saepe amet at facilis cum et reiciendis ea sequi? Quam, dicta. Commodi, aliquid. Quae, saepe pariatur.</p>
+                <br>
+                
+                <h3>Raça</h3>
+                <br>
+                <div>
+                    <canvas id="graf2_res"></canvas>
+                </div>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, laborum inventore similique voluptas maiores saepe amet at facilis cum et reiciendis ea sequi? Quam, dicta. Commodi, aliquid. Quae, saepe pariatur.</p>
+                <br>
+                
+                <h3>Idade</h3>
+                <br>
+                <div>
+                    <canvas id="graf3_res"></canvas>
+                </div>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, laborum inventore similique voluptas maiores saepe amet at facilis cum et reiciendis ea sequi? Quam, dicta. Commodi, aliquid. Quae, saepe pariatur.</p>
+                <br>
+                
+                <h3>Gênero</h3>
+                <br>
+                <div>
+                    <canvas id="graf4_res"></canvas>
+                </div>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, laborum inventore similique voluptas maiores saepe amet at facilis cum et reiciendis ea sequi? Quam, dicta. Commodi, aliquid. Quae, saepe pariatur.</p>
+                <br>
+
+        </div>
+
+        </main>
+        <hr>
+        <footer>
+            <p>Alunos : kauan e kaleo </p>
+            <p> / </p>
+            <p> Trabalho: Escravidão</p>
+        </footer>
+    </body>
+</html>
