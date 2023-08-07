@@ -5,10 +5,10 @@
 
 
 const dataLineBoundaries = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    labels: ['analfabetos', 'Fundamental Incompleto', 'Fundamental Completo', 'Ensino Médio Incompleto', 'Ensino Médio Completo'],
     datasets: [{
       label: 'Sales',
-      data: [50, 60, 70, 65, 80, 75],
+      data: [3, 15, 10, 6, 2],
       borderColor: '#36A2EB',
       borderWidth: 2,
       backgroundColor: 'rgba(54, 162, 235, 0.2)',
@@ -35,14 +35,14 @@ const dataLineBoundaries = {
         display: true,
         title: {
           display: true,
-          text: 'Month',
+          text: 'ESCOLARIDADE',
         },
       },
       y: {
         display: true,
         title: {
           display: true,
-          text: 'Sales',
+          text: 'RESGATADOS',
         },
       },
     },
@@ -60,9 +60,9 @@ const dataLineBoundaries = {
   
   
   const dataPie = {
-    labels: ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5'],
+    labels: ['Branca', 'Parda', 'Preta', 'Indigena'],
     datasets: [{
-      data: [20, 25, 15, 10, 30],
+      data: [27, 10, 2, 2],
       backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#33FF33', '#FF9933'],
     }],
   };
@@ -92,12 +92,12 @@ const dataLineBoundaries = {
   const dataRadar = {
     labels: ['Strength', 'Speed', 'Agility', 'Stamina', 'Skill'],
     datasets: [{
-      label: 'Player 1',
+      label: '18 ',
       data: [80, 75, 85, 90, 70],
       borderColor: 'rgba(255, 99, 132, 0.8)',
       backgroundColor: 'rgba(255, 99, 132, 0.2)',
     }, {
-      label: 'Player 2',
+      label: '35 à 49',
       data: [70, 85, 80, 75, 85],
       borderColor: 'rgba(54, 162, 235, 0.8)',
       backgroundColor: 'rgba(54, 162, 235, 0.2)',
