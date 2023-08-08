@@ -64,6 +64,28 @@ h1{
     color: black;
 }
 
+.cont_n{
+    background-color: rgb(241, 178, 62);
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 20px;
+}
+
+.cont_n hr{
+    border-color: black;
+}
+
+.cont_r{
+    background-color: rgb(241, 178, 62);
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 20px;
+}
+
+.cont_r hr{
+    border-color: black;
+}
+
 footer{
     display: flex;
 
