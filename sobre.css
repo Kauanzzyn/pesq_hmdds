@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin: 20px 0px 0px 0px;
+    background-color: aqua;
+
+    
+}
+
+#foto_equipy{
+    height: 230px;
+    width: 300px;
+    position: relative;
+    left: 800px;
+    top: 150px;
+    border: solid black 2px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+}
+
+.cont_equipe{
+    height: 700px;
+    width: 570px;
+    margin-left: 50px;
+    border: solid 2px black;
+}

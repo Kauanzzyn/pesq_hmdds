@@ -12,23 +12,42 @@ body{
     
 }
 
+header{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin: 20px 0px 0px 0px;
+
+
+    
+}
+header h1{
+    font-size: 23px;
+}
 
 
 nav{
     display: flex;
     align-items: center;
+    justify-content: space-around;
     width: 100vw;
     height: 6vh;
     padding: 10px;
     border-bottom: 1px solid black;
+
 }
 
 a{
     color: black;
     font-weight: 700;
     text-decoration: none;
+    margin: 0px 20px 0px 0px;
+    
     
 }
+
+
+
 
 #titil_int{
     position: absolute;
@@ -42,10 +61,13 @@ a{
     top: 120px;
 }
 
-.a-nav{
-    font-size: 28px;
-    position: absolute;
-    left: 43px;
+nav a{
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .filter-resgatados{
@@ -67,10 +89,10 @@ h1{
 
 #mr{
     height: 64px;
-    width: 40px;
+    width: 120px;
     position: absolute;
     top: 0px;
-    left: 1665px;
+    left: 1179px;
 }
 
 #reference{

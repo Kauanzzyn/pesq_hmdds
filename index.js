@@ -87,103 +87,66 @@ const dataLineBoundaries = {
   
   
   
-  // Radar ----------------------------------------------------------
+  // Barras ----------------------------------------------------------
   
-  const dataRadar = {
-    labels: ['Strength', 'Speed', 'Agility', 'Stamina', 'Skill'],
-    datasets: [{
-      label: '18 ',
-      data: [80, 75, 85, 90, 70],
-      borderColor: 'rgba(255, 99, 132, 0.8)',
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-    }, {
-      label: '35 à 49',
-      data: [70, 85, 80, 75, 85],
-      borderColor: 'rgba(54, 162, 235, 0.8)',
-      backgroundColor: 'rgba(54, 162, 235, 0.2)',
-    }],
-  };
-  
-  const optionsRadar = {
-    responsive: true,
-    maintainAspectRatio: false,
-    title: {
-      display: true,
-      text: 'Radar Chart',
-      fontSize: 20,
-      padding: 20,
-    },
-    scale: {
+    // Dados para o gráfico
+    var databar = {
+      labels: ['18 - 24', '25 - 29', '30 - 39', '40 - 49', '50 - 59'],
+      datasets: [{
+        label: 'Vendas Mensais',
+        data: [9, 6, 7, 10, ],
+        backgroundColor: 'rgba(54, 162, 235, 0.7)', // Cor das barras
+        borderColor: 'rgba(54, 162, 235, 1)', // Cor da borda das barras
+        borderWidth: 1 // Largura da borda das barras
+      }]
+    };
+
+    // Configurações do gráfico
+    var optionsbar = {
+      scales: {
+        y: {
+          beginAtZero: true // Começar o eixo Y a partir de 0
+        }
+      }
+    };
+
+    // Criando o gráfico de barras
+    var ctxbar = document.getElementById('graf3_nat').getContext('2d');
+    new Chart(ctxbar, {
+      type: 'bar', // Tipo de gráfico (barra)
+      data: databar,
+      options: optionsbar
+    });
+
+
+  // Polar   ----------------------
+
+var polarData = {
+  labels: ['Feminino', 'Masculino'],
+  datasets: [{
+      data: [39, 4],
+      backgroundColor: ['red', 'blue']
+  }]
+};
+
+// Configurações do gráfico
+var options = {
+  responsive: true,
+  maintainAspectRatio: false,
+  scale: {
       ticks: {
-        beginAtZero: true,
-        max: 100,
-      },
-    },
-  };
-  
-  const ctxRadar = document.getElementById('graf3_nat').getContext('2d');
-  new Chart(ctxRadar, {
-    type: 'radar',
-    data: dataRadar,
-    options: optionsRadar,
-  });
-  
-  
-  // PointStyle    ----------------------
-  
-  
-  const dataPointStyle = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-    datasets: [{
-      label: 'Sales',
-      data: [50, 60, 70, 65, 80, 75],
-      borderColor: '#36A2EB',
-      borderWidth: 2,
-      backgroundColor: 'rgba(54, 162, 235, 0.2)',
-      pointBackgroundColor: '#FF6384',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: '#FF6384',
-      pointRadius: 6,
-      pointHoverRadius: 8,
-      pointStyle: 'rectRounded', // Estilo do ponto (rectRounded)
-    }]
-  };
-  
-  const optionsPointStyle = {
-    responsive: true,
-    maintainAspectRatio: false,
-    title: {
-      display: true,
-      text: 'Point Style Chart',
-      fontSize: 20,
-      padding: 20,
-    },
-    scales: {
-      x: {
-        display: true,
-        title: {
-          display: true,
-          text: 'Month',
-        },
-      },
-      y: {
-        display: true,
-        title: {
-          display: true,
-          text: 'Sales',
-        },
-      },
-    },
-  };
-  
-  const ctxPointStyle = document.getElementById('graf4_nat').getContext('2d');
-  new Chart(ctxPointStyle, {
-    type: 'line',
-    data: dataPointStyle,
-    options: optionsPointStyle,
-  });
-  
+          beginAtZero: true
+      }
+  }
+};
+
+// Criar o gráfico Polar Area
+var polarCtx = document.getElementById('graf4_nat').getContext('2d');
+var polarChart = new Chart(polarCtx, {
+  type: 'polarArea',
+  data: polarData,
+  options: options
+});
   
   
   // --------------------Residentes --------------------
@@ -272,101 +235,65 @@ const dataLineBoundaries = {
   
   // // Radar ----------------------------------------------------------
   
-  const dataRadar2 = {
-    labels: ['Strength', 'Speed', 'Agility', 'Stamina', 'Skill'],
+  var databar2 = {
+    labels: ['18 - 24', '25 - 29', '30 - 39', '40 - 49', '50 - 59'],
     datasets: [{
-      label: 'Player 1',
-      data: [80, 75, 85, 90, 70],
-      borderColor: 'rgba(255, 99, 132, 0.8)',
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-    }, {
-      label: 'Player 2',
-      data: [70, 85, 80, 75, 85],
-      borderColor: 'rgba(54, 162, 235, 0.8)',
-      backgroundColor: 'rgba(54, 162, 235, 0.2)',
-    }],
+      label: 'Vendas Mensais',
+      data: [18, 11, 11, 14, 3],
+      backgroundColor: '#b1ccc4', // Cor das barras
+      borderColor: '#4e5861', // Cor da borda das barras
+      borderWidth: 1 // Largura da borda das barras
+    }]
   };
-  
-  const optionsRadar2 = {
-    responsive: true,
-    maintainAspectRatio: false,
-    title: {
-      display: true,
-      text: 'Radar Chart',
-      fontSize: 20,
-      padding: 20,
-    },
-    scale: {
-      ticks: {
-        beginAtZero: true,
-        max: 100,
-      },
-    },
+
+  // Configurações do gráfico
+  var optionsbar2 = {
+    scales: {
+      y: {
+        beginAtZero: true // Começar o eixo Y a partir de 0
+      }
+    }
   };
-  
-  const ctxRadar2 = document.getElementById('graf3_res').getContext('2d');
-  new Chart(ctxRadar2, {
-    type: 'radar',
-    data: dataRadar2,
-    options: optionsRadar2,
+
+  // Criando o gráfico de barras
+  var ctxbar2 = document.getElementById('graf3_res').getContext('2d');
+  new Chart(ctxbar2, {
+    type: 'bar', // Tipo de gráfico (barra)
+    data: databar2,
+    options: optionsbar2
   });
   
   
-  // // PointStyle    ----------------------
+  // // polar    ----------------------
   
   
-  const dataPointStyle2 = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+ 
+  var polarData2 = {
+    labels: ['Feminino', 'Masculino'],
     datasets: [{
-      label: 'Sales',
-      data: [50, 60, 70, 65, 80, 75],
-      borderColor: '#36A2EB',
-      borderWidth: 2,
-      backgroundColor: 'rgba(54, 162, 235, 0.2)',
-      pointBackgroundColor: '#FF6384',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: '#FF6384',
-      pointRadius: 6,
-      pointHoverRadius: 8,
-      pointStyle: 'rectRounded', // Estilo do ponto (rectRounded)
+        data: [58, 9],
+        backgroundColor: ['red', 'blue']
     }]
   };
   
-  const optionsPointStyle2 = {
+  // Configurações do gráfico
+  var options2 = {
     responsive: true,
     maintainAspectRatio: false,
-    title: {
-      display: true,
-      text: 'Point Style Chart',
-      fontSize: 20,
-      padding: 20,
-    },
-    scales: {
-      x: {
-        display: true,
-        title: {
-          display: true,
-          text: 'Month',
-        },
-      },
-      y: {
-        display: true,
-        title: {
-          display: true,
-          text: 'Sales',
-        },
-      },
-    },
+    scale: {
+        ticks: {
+            beginAtZero: true
+        }
+    }
   };
   
-  const ctxPointStyle2 = document.getElementById('graf4_res').getContext('2d');
-  new Chart(ctxPointStyle2, {
-    type: 'line',
-    data: dataPointStyle2,
-    options: optionsPointStyle2,
+  // Criar o gráfico Polar Area
+  var polarCtx2 = document.getElementById('graf4_res').getContext('2d');
+  var polarChart2 = new Chart(polarCtx2, {
+    type: 'polarArea',
+    data: polarData2,
+    options: options2
   });
-  
   
 
 
